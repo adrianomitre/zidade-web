@@ -45,10 +45,7 @@ group :development do
   gem 'spring'
 end
 
-group :development, :test do
-  gem 'awesome_print', :require => 'ap'
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-byebug'
-  gem 'awesome_print', :require => 'ap'
+local_gemfile = File.dirname(__FILE__) + "/Gemfile.local.rb"
+if File.exist?(local_gemfile)
+  self.instance_eval(Bundler.read_file(local_gemfile))
 end
