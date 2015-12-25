@@ -29,7 +29,8 @@ Please feel free to use a different markup language if you do not plan to run
 
 == Setting up your development environment
 
-* {Ruby on Rails 4.1 Release Notes — Ruby on Rails Guides — config/secrets.yml}[http://guides.rubyonrails.org/4_1_release_notes.html#config-secrets-yml]
+* {Ruby on Rails 4.1 Release Notes — Ruby on Rails Guides — config/secrets.yml}[http://guides.rubyonrails.org/4_1_release_notes.html#config-secrets-yml].
+* Create your Gemfile.local.rb with your favorite development gems. If you use awesome_print and want joins to be printed as expected (i.e., with the selected columns), consider using {this version}[https://github.com/michaeldv/awesome_print/pull/211].
 
 == Before commiting
 
