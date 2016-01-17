@@ -1,0 +1,20 @@
+<% if user_signed_in? %>
+  <li class='dropdown dark user-menu'>
+    <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+      <span class='user-name'><%= current_user.email %></span>
+      <b class='caret'></b>
+    </a>
+    <ul class='dropdown-menu'>
+      <li>
+        <%= link_to "Edit", edit_user_registration_path %>
+      </li>
+      <li class='divider'></li>
+      <li>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      </li>
+    </ul>
+  </li>
+<% else %>
+  <li><%= link_to "Sign up", new_user_registration_path, class: "btn-header" %></li>
+  <li><%= link_to "Login", new_user_session_path, class: "btn-header active" %></li>
+<% end %>
